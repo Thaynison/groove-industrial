@@ -49,3 +49,7 @@ body {
     background-color: #c99f17;
     color: #000;
 }
+.sidebar img {
+    width: 100%;
+    height: 20%;
+}
