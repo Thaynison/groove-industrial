@@ -1,0 +1,30 @@
+body {
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ECAE1B;
+}
+.btn-primary {
+    background-color: #ECAE1B;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #ECAE1B;
+}
+.brand-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ECAE1B;
+    text-align: center;
+    margin-bottom: 1rem;
+}

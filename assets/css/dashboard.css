@@ -1,0 +1,32 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
+.navbar {
+    background-color: #ECAE1B;
+}
+.navbar-brand {
+    color: #000;
+    font-weight: bold;
+}
+.navbar-brand:hover {
+    color: #333;
+}
+.card {
+    background-color: #1c1c1c;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.card-title {
+    color: #ECAE1B;
+}
+.btn-custom {
+    background-color: #ECAE1B;
+    color: #000;
+    border: none;
+}
+.btn-custom:hover {
+    background-color: #c99f17;
+    color: #000;
+}
