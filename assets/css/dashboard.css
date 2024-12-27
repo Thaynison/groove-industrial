@@ -1,6 +1,25 @@
 body {
-    background-color: #464646;
+    background-color: #363636;
     color: #fff;
+}
+.sidebar {
+    background-color: #363636;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    width: 250px;
+}
+.sidebar .nav-link {
+    color: #ECAE1B;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.sidebar .nav-link:hover {
+    color: #fff;
+}
+.content {
+    margin-left: 270px;
+    padding: 20px;
 }
 .navbar {
     background-color: #ECAE1B;
@@ -13,7 +32,7 @@ body {
     color: #333;
 }
 .card {
-    background-color: #464646;
+    background-color: #363636;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
