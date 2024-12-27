@@ -1,7 +1,20 @@
 document.querySelector('form').addEventListener('submit', async function (e) {
     e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const errorMessageDiv = document.getElementById('error-message');
+
+    function showMessage(message, type = 'danger') {
+        errorMessageDiv.textContent = message;
+        errorMessageDiv.className = `alert alert-${type}`;
+        errorMessageDiv.classList.remove('d-none');
+    }
+
+    if (!email || !password) {
+        showMessage('Por favor, preencha todos os campos.');
+        return;
+    }
 
     try {
         const response = await fetch('https://groove-industrial-api.vercel.app/api/api_buscar_login.php', {
@@ -17,9 +30,10 @@ document.querySelector('form').addEventListener('submit', async function (e) {
         if (result.status === 'success') {
             window.location.href = result.redirect;
         } else {
-            alert(result.message);
+            showMessage(result.message);
         }
     } catch (error) {
-        alert('Erro ao realizar login. Tente novamente.');
+        console.error('Erro:', error);
+        showMessage('Ocorreu um erro ao processar o login. Tente novamente.');
     }
 });
